@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       appBar: AppBar(
         backgroundColor: Color(0xFF075F55),
           title: Text(
-            'kabarKu',
+            'TingTingChat',
             style:
             TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
