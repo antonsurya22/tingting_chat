@@ -1,0 +1,19 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml:1:1-44
+INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml:1:1-44
+INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml:1:1-44
+	package
+		ADDED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml:1:11-41
+		INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+		INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml:1:1-44
+uses-sdk
+INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+		ADDED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
+		INJECTED from C:\dev\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_auth_ui-1.0.1\android\src\main\AndroidManifest.xml
