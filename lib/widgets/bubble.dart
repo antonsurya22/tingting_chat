@@ -51,11 +51,11 @@ Widget bubbleImageFromUser(ChatMessage chatContent){
        margin: const BubbleEdges.only(top: 10.0),
        alignment: Alignment.topRight,
        nip: BubbleNip.rightBottom,
-       color: Colors.black54,
+       color: Color(0xFFAEFCBF),
        child: Column(children: [
        Image.network(chatContent.pictureLink),
        Text('${chatContent.content}',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.black),
         textAlign: TextAlign.right,
         ),
        ],
@@ -75,7 +75,7 @@ Widget bubbleImageFromFriend(ChatMessage chatContent){
         margin: const BubbleEdges.only(top: 10.0),
         alignment: Alignment.topLeft,
         nip: BubbleNip.leftBottom,
-        color: Colors.yellow,
+        color: Colors.white,
         child: Column(children: [
         Image.network(chatContent.pictureLink),
         Text('${chatContent.content}',
@@ -84,6 +84,6 @@ Widget bubbleImageFromFriend(ChatMessage chatContent){
          ],)
         ),
        ],
-     );
+   );
 }
 

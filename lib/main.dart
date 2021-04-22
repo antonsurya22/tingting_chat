@@ -6,7 +6,7 @@ PTI 4 A
 
 TingTingChat
 
- */
+*/
 
 import 'dart:convert';
 import 'dart:math';
@@ -24,6 +24,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:tingting_chat2/screen/chat_screen.dart';
 import 'package:tingting_chat2/screen/register.dart';
 
+import 'about.dart';
 import 'const/const.dart';
 import 'firebase_utils/firebase_utils.dart';
 import 'model/user_model.dart';
@@ -151,16 +152,19 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           // ),
           title: Row(
             children: <Widget>[
-              Text('TingTingChat', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+              Text('TingTing Chat', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
             ],
           ),
 
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.more_vert),
+            icon: Icon(Icons.info_outline),
             color: Colors.white,
             onPressed: (){
-              aboutDialogOpen(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutRoute()),
+              );
             },
           ),
         ],
