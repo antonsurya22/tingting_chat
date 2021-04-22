@@ -110,8 +110,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   UserModel userLogged;
 
   final List<Tab> tabs = <Tab>[
-    Tab(icon:Icon(Icons.chat),text: "Pesan"),
-    Tab(icon:Icon(Icons.people), text: "Teman")
+    // Tab(icon:Icon(Icons.chat),text: "Pesan"),
+    // Tab(icon:Icon(Icons.people), text: "Teman")
+    Tab(text: "Pesan"),
+    Tab(text: "Teman")
   ];
 
   TabController _tabController;
@@ -142,17 +144,36 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF075F55),
-          title: Text(
-            'TingTingChat',
-            style:
-            TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          // title: Text(
+          //   'TingTingChat',
+          //   style:
+          //   TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          // ),
+          title: Row(
+            children: <Widget>[
+              Text('TingTingChat', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+            ],
           ),
+
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            color: Colors.white,
+            onPressed: (){
+              aboutDialogOpen(context);
+            },
+          ),
+        ],
+
+
+
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         bottom: new TabBar(
           isScrollable: false,
           unselectedLabelColor: Colors.black45,
           labelColor: Colors.white,
+          indicatorColor: Colors.white,
           tabs: tabs,
           controller: _tabController,
         )

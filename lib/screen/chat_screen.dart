@@ -33,10 +33,22 @@ class DetailScreen extends ConsumerWidget
     var friendUser = watch(chatUser).state;
     return Scaffold(
       appBar: AppBar( backgroundColor: Color(0xFF075F55), centerTitle: true,
-      title: Text('${friendUser.firstName} ${friendUser.lastName}'),),
+      title: Text('${friendUser.firstName} ${friendUser.lastName}'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            color: Colors.white,
+            onPressed: (){
+              aboutDialogOpen(context);
+            },
+          ),
+        ],
+      ),
         body: SafeArea(
+          child: Container(
+            color: Color(0xFFECE5DD),
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(10),
             child: Column(children: [
               Expanded(
                   flex: 8,
@@ -53,18 +65,29 @@ class DetailScreen extends ConsumerWidget
                         child: chatContent.picture ? chatContent.senderId == user.uid ? bubbleImageFromUser(chatContent)
                         : bubbleImageFromFriend(chatContent) : chatContent.senderId == user.uid ? bubbleTextFromUser(chatContent) : bubbleTextFromFriend(chatContent) );
                       })  : Center(child: CircularProgressIndicator()),),
+              SizedBox(height: 10),
               Expanded(
                   flex: 1,
+                    //color: Colors.white,
                   child: Row(children: [
-                    Expanded(child: TextField(
-                      keyboardType: TextInputType.multiline,
-                      expands: true,
-                      minLines: null,
-                      maxLines: null,
-                      controller: _textEditingController,
-                      decoration: InputDecoration(hintText: 'Ketikan Pesan..'),
-                    ),),
-                    IconButton(icon: Icon(Icons.send, color: Color(0xFF075F55)),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20.0)),
+
+                      child: TextField(
+                       keyboardType: TextInputType.multiline,
+                       expands: true,
+                       minLines: null,
+                       maxLines: null,
+                       controller: _textEditingController,
+                       decoration: InputDecoration(hintText: 'Ketikan Pesan..', enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0), borderSide: BorderSide.none),
+                           focusedBorder: UnderlineInputBorder(borderSide: BorderSide.none), contentPadding: EdgeInsets.only(left: 10, top: 15)),
+                    ),),),
+                    SizedBox(width: 5),
+                    Container(
+                      decoration: BoxDecoration(color: Color(0xFF075F55), borderRadius: BorderRadius.circular(50),),
+                    child: IconButton(icon: Icon(Icons.send, color: Colors.white,),
                     onPressed: () {
                       offsetRef.once()
                           .then((DataSnapshot snapshot){
@@ -78,10 +101,11 @@ class DetailScreen extends ConsumerWidget
                       //Auto Scroll Chat
                       autoScroll(_scrollController);
 
-                    },)
-                  ],),)
-
+                    },),)
+                  ],),
+              ),
             ],),
+          ),
           ),
         ),
     );

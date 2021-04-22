@@ -15,9 +15,9 @@ Widget bubbleTextFromUser(ChatMessage chatContent){
         margin: const BubbleEdges.only(top: 10.0),
         alignment: Alignment.topRight,
         nip: BubbleNip.rightBottom,
-        color: Color(0xFF128D7F),
+        color: Color(0xFFAEFCBF),
         child: Text('${chatContent.content}',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
           textAlign: TextAlign.right,),
       )
     ],
@@ -33,9 +33,9 @@ Widget bubbleTextFromFriend(ChatMessage chatContent){
         margin: const BubbleEdges.only(top: 10.0),
         alignment: Alignment.topLeft,
         nip: BubbleNip.leftBottom,
-        color: Color(0xFF075C52),
+        color: Color(0xFFFAFAFA),
         child: Text('${chatContent.content}',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
           textAlign: TextAlign.left,),
   )
 
