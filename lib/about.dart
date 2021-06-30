@@ -14,7 +14,6 @@ class AboutRoute extends StatelessWidget {
           children: <Widget>[
             Picture(),
             TextName(),
-            studentNumber(),
             ownClass(),
             RowCardOne(),
           ],
@@ -27,7 +26,7 @@ class AboutRoute extends StatelessWidget {
           color: Color(0xFF075F55),
           alignment: Alignment.center,
           child: Text(
-            'Developed by Antonie Dev',
+            'Pre-release version [experiemental].build3',
             style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w300,
@@ -49,7 +48,7 @@ class Picture extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
         child: CircleAvatar(
           radius: 90,
-          backgroundImage: AssetImage('asset/anton.jpg'),
+          backgroundImage: AssetImage('asset/chat_icon2.png'),
         ),
       ),
       margin: const EdgeInsets.only(top: 30.0),
@@ -62,7 +61,7 @@ class TextName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        'I Gusti Nyoman Anton Surya Diputra',
+        'Antonie-Soenitra Dev',
         style: TextStyle(
           color: Color(0xFF075F55),
           fontSize: 20,
@@ -74,29 +73,13 @@ class TextName extends StatelessWidget {
   }
 }
 
-class studentNumber extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        '1915051027',
-        style: TextStyle(
-          color: Color(0xFF075F55),
-          fontSize: 18,
-        ),
-        textAlign: TextAlign.center,
-      ),
-      margin: const EdgeInsets.only(top: 5.0),
-    );
-  }
-}
 
 class ownClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        'PTI 4 A',
+        'Created with <3',
         style: TextStyle(
           color: Color(0xFF075F55),
           fontSize: 17,
@@ -133,12 +116,12 @@ class RowCardOne extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Icon(
-                    Icons.school,
+                    Icons.cancel_outlined,
                     size: 50,
                     color: Color(0xFF075F55),
                   ),
                   Text(
-                    'Undiksha',
+                    'Pre-release',
                     style: TextStyle(color: Color(0xFF075F55), fontSize: 18),
                   )
                 ],
@@ -164,12 +147,12 @@ class RowCardOne extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Icon(
-                    Icons.menu_book,
+                    Icons.contact_phone_outlined,
                     size: 50,
                     color: Color(0xFF075F55),
                   ),
                   Text(
-                    'PTI 4 A',
+                    'Bantuan',
                     style: TextStyle(color: Color(0xFF075F55), fontSize: 18),
                   )
                 ],

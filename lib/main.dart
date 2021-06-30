@@ -21,6 +21,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart' as FirebaseAuth ;
 import 'package:page_transition/page_transition.dart';
+import 'package:tingting_chat2/scan/scan.dart';
 import 'package:tingting_chat2/screen/chat_screen.dart';
 import 'package:tingting_chat2/screen/register.dart';
 
@@ -114,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     // Tab(icon:Icon(Icons.chat),text: "Pesan"),
     // Tab(icon:Icon(Icons.people), text: "Teman")
     Tab(text: "Pesan"),
-    Tab(text: "Teman")
+    Tab(text: "Teman"),
   ];
 
   TabController _tabController;
@@ -158,6 +159,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
         actions: <Widget>[
           IconButton(
+            icon: Icon(Icons.qr_code),
+            color: Colors.white,
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ScanPage()),
+              );
+            },
+          ),
+          IconButton(
             icon: Icon(Icons.info_outline),
             color: Colors.white,
             onPressed: (){
@@ -167,6 +178,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
               );
             },
           ),
+
         ],
 
 
